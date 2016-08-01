@@ -18,6 +18,8 @@ enablePlugins(DockerPlugin)
 // The Dockerfile in this current directory generates this image, which contains TakipiAgent
 dockerBaseImage := "takipi-base-image:latest"
 
+packageName in Docker := "app"
+
 bashScriptExtraDefines += """addJava "-agentlib:TakipiAgent""""
 bashScriptExtraDefines += """addJava "-Dtakipi.sources.path=/home/guiga/tapechart/server/src/main/scala""""
 
