@@ -17,7 +17,7 @@ class PingActor extends Actor with ActorLogging {
   	  counter += 1
   	  //if (counter == 3) context.system.shutdown()
   	  //else 
-      Thread.sleep(1000)
+      //Thread.sleep(1000)
       sender() ! PingMessage("ping")
   }	
 }
